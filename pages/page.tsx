@@ -6,7 +6,7 @@ export default function Home() {
   const [random, setRandom] = React.useState();
   const callAPI = async () => {
     try {
-      const res = await fetch(process.env.NEXT_PUBLIC_API_TEST);
+      const res = await fetch(process.env.NEXT_PUBLIC_API_TEST as string);
       const data = await res.json();
       console.log(data);
       setRandom(data.title);
